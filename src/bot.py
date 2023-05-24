@@ -66,10 +66,13 @@ class ClanBotClient(discord.Client):
         for guild in client.guilds:
             logger.info(' - {0.name} ({0.id})'.format(guild))
         logger.info('=' * 60)
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="les clans"))
+        client.status = discord.Status.online
         logger.info('Syncing...')
         if not self.synced:
             await tree.sync()
             self.synced = True
+            logger.info('Synced !')
 
 
 client = ClanBotClient()
