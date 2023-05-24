@@ -102,9 +102,9 @@ async def new_clan(ctx: discord.Interaction, nom: str):
         await ctx.response.send_message(embed=embed, ephemeral=True, delete_after=15)
     else:
         try:
-            await ctx.guild.create_role(name="Membre " + nom, mentionable=True, hoist=True,
+            await ctx.guild.create_role(name="Membre " + nom, mentionable=False, hoist=False,
                                         reason="Création du clan " + nom + " par " + ctx.user.name)
-            await ctx.guild.create_role(name="Chef " + nom, mentionable=True, hoist=True,
+            await ctx.guild.create_role(name="Chef " + nom, mentionable=False, hoist=False,
                                         reason="Création du clan " + nom + " par " + ctx.user.name)
 
             embed = discord.Embed(title="Création de clan",
