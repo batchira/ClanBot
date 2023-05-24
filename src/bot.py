@@ -3,17 +3,17 @@ import os
 from dotenv import load_dotenv
 from discord import app_commands
 import logging
-from src import logging_additions
+import logging_additions
 import logging.handlers
 
-if not os.path.exists("../logs"):
-    os.mkdir("../logs")
+if not os.path.exists("logs"):
+    os.mkdir("logs")
 
 # Logging
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.handlers.RotatingFileHandler(
-    filename='../logs/discord.log',
+    filename='logs/discord.log',
     maxBytes=32 * 1024 * 1024,
     backupCount=5,
     encoding='utf-8')
@@ -29,7 +29,7 @@ logger.addHandler(console)
 
 
 # .env reading
-if not os.path.exists("../.env"):
+if not os.path.exists(".env"):
     logger.critical(".env not found, exiting...")
     exit(1)
 try:
