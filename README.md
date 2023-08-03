@@ -33,4 +33,4 @@ All commands and context menus content is written in French. If you want to use 
 This project is licensed under the GNU GPLv3 license. See the LICENSE file for more information.
 
 ### Contact
-If you have any questions, feel free to contact me on Discord: `EllipsiaLePoulet#0001`
+If you have any questions, feel free to contact me on Discord: `captain_jack_sparrow`
